@@ -4,6 +4,9 @@
 
 ApplyDirect is a lightweight Chrome extension that scans job-related webpages and tries to identify the most relevant application link.
 
+<img width="1280" height="503" alt="image" src="https://github.com/user-attachments/assets/3b0f7784-a6ed-47e6-bb09-23bb1b7e1185" />
+
+
 I started building it after repeatedly running into job posts where clicking **"Apply"** sends you through third-party pages, advertisements, redirects, or multiple intermediate pages before you finally reach the actual company application.
 
 ApplyDirect is an attempt to make that process simpler.
