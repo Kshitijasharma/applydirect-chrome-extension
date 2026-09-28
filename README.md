@@ -31,7 +31,7 @@ ApplyDirect is an attempt to make that process simpler.
 
 ## The Problem
 
-While searching for jobs, I often came across websites that are loaded with multiple running ads, articles, some dozens of random links. And somewhere in between those links "Apply" exists.
+While searching for jobs, I often came across websites that are loaded with multiple running ads, articles, some dozens of random links. And somewhere in between thoselinks, actual "Apply" exists.
 
 So instead of manually inspecting every link, I wanted something that could help identify the most likely application destination.
  That why I built this project.
