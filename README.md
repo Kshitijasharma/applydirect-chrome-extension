@@ -1,17 +1,33 @@
-# ↗ ApplyDirect
+<div align="center">
+   
+# ↗️ ApplyDirect
 
-> Skip the noise. Find the actual application link.
+Skip the noise. Get to the application.
 
-ApplyDirect is a lightweight Chrome extension that scans job-related webpages and tries to identify the most relevant application link.
+A lightweight Chrome extension that scans job pages and finds the  
+**most likely direct application link** without making you hunt through the page.
 
-<img width="944" height="503" alt="image" src="https://github.com/user-attachments/assets/84f7eda2-bb61-4df7-b9cf-adb77e2b3234" />
+<br>
 
+![Chrome](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Manifest](https://img.shields.io/badge/Manifest-V3-8A2BE2?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Experimental-FF8C00?style=for-the-badge)
+
+<br>
+
+<img width="944" alt="ApplyDirect Preview" src="https://github.com/user-attachments/assets/84f7eda2-bb61-4df7-b9cf-adb77e2b3234" />
+
+<br>
 
 I started building it after repeatedly running into job posts where clicking **"Apply"** sends you through third-party pages, advertisements, redirects, or multiple intermediate pages before you finally reach the actual company application.
 
 ApplyDirect is an attempt to make that process simpler.
 
 
+</div>
+
+---
 
 ## The Problem
 
@@ -51,13 +67,13 @@ You can install it locally using Chrome's **Developer Mode**.
 Open your terminal and run:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/apply-direct.git
+git clone https://github.com/Kshitijasharma/applydirect-chrome-extension.git
 ```
 
 Then enter the project:
 
 ```bash
-cd apply-direct
+cd applydirect-chrome-extension
 ```
 
 Alternatively, you can download the project without Git:
@@ -241,16 +257,20 @@ Different phrases contribute different weights to the candidate's score.
 ApplyDirect also recognizes common ATS/job platforms such as:
 
 ```text
-Greenhouse
-Lever
-Workday
-Ashby
-SmartRecruiters
-iCIMS
-Jobvite
-BambooHR
-Workable
-SuccessFactors
+ApplyDirect recognizes URLs belonging to common Applicant Tracking Systems.
+
+| ATS | Detected |
+|:---|:---:|
+| Greenhouse | ✅ |
+| Lever | ✅ |
+| Workday | ✅ |
+| Ashby | ✅ |
+| SmartRecruiters | ✅ |
+| iCIMS | ✅ |
+| Jobvite | ✅ |
+| BambooHR | ✅ |
+| Workable | ✅ |
+| SuccessFactors | ✅ |
 ```
 
 A URL pointing to a known ATS is a strong indication that it may be an actual application destination.
@@ -322,18 +342,13 @@ Candidate Link
 For example:
 
 ```text
-"Apply Now"
-        +30
+"Apply Now":  +30
 
-Known ATS domain
-        +40
+Known ATS domain: +40
 
-Contains /jobs/
-        +15
+Contains /jobs/:  +15
 
-External website
-        +10
-
+External website: +10
 ----------------
 Score = 95
 ```
@@ -502,35 +517,6 @@ This means it may not correctly detect applications implemented through:
 
 The highest-ranked result is also a **heuristic prediction**, not a guarantee that the URL is the final application destination.
 
-
-# Planned Improvements
-
-Some things I want to explore next:
-
-- [ ] Better false-positive detection
-- [ ] Redirect URL resolution
-- [ ] Tracking/intermediary link detection
-- [ ] JavaScript button detection
-- [ ] Improved ATS recognition
-- [ ] Better handling of dynamic webpages
-- [ ] More real-world testing across job websites
-- [ ] Debug mode for understanding candidate scores
-
-The long-term goal is:
-
-```text
-Job Post
-   ↓
-ApplyDirect
-   ↓
-Detect intermediary links
-   ↓
-Resolve destination
-   ↓
-Actual company / ATS application
-```
-
-
 # 🤝 Contributing:
 
 This project is still experimental, so contributions and test cases are welcome.
@@ -545,14 +531,5 @@ What you expected it to detect
 
 Please avoid including private or sensitive information in issues.
 
-# Why I Built This:
-
-This started from a very small annoyance while applying for jobs:
-
-> Why does clicking "Apply" sometimes require clicking "Apply" three more times?
-
-Instead of continuing to complain about it, I decided to see if I could build something that helps.
-
-ApplyDirect is that experiment.
 
 
