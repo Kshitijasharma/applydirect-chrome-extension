@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "ApplyDirect",
+    "version": "1.0.0",
+    "description": "Find the direct application link from job listing pages.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "assests/logo.png",
+            "32": "assests/logo.png",
+            "48": "assests/logo.png",
+            "128": "assests/logo.png"
+        }
+    },
+    "icons": {
+        "16": "assests/logo.png",
+        "32": "assests/logo.png",
+        "48": "assests/logo.png",
+        "128": "assests/logo.png"
+    }
+}
