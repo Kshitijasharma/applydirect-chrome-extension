@@ -22,9 +22,8 @@ A lightweight Chrome extension that scans job pages and finds the
 
 I started building it after repeatedly running into job posts where clicking **"Apply"** sends you through third-party pages, advertisements, redirects, or multiple intermediate pages before you finally reach the actual company application.
 
-ApplyDirect is an attempt to make that process simpler.
 
-
+🌸 **FYI: I did vibe-coded this project, so if you spot any vulnerabilities, bugs, or questionable code, please let me know. Suggestions and improvements are always welcome!**
 </div>
 
 ---
