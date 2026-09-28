@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ApplyDirect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================================
+             HEADER
+        ================================= -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="logo">
+                    <img src="../assests/logo.png" alt="ApplyDirect Logo" class="brand-logo-img">
+                </div>
+
+                <span>ApplyDirect</span>
+
+            </div>
+
+            <button class="menu-button" title="Menu">
+                •••
+            </button>
+
+        </header>
+
+
+        <!-- ================================
+             IDLE STATE
+
+             This is what the user sees
+             before scanning.
+        ================================= -->
+
+        <section id="idleState" class="state">
+
+            <div class="hero-card">
+
+                <div class="hero-icon">
+                    <img src="../assests/logo.png" alt="ApplyDirect" class="hero-logo-img">
+                </div>
+
+                <div>
+                    <h2>Find the real apply link</h2>
+
+                    <p>
+                        Skip redirects, clutter and job-site noise.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button id="scanButton" class="primary-button">
+
+
+                Scan this page
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================================
+             SCANNING STATE
+        ================================= -->
+
+        <section id="scanningState" class="state hidden">
+
+            <div class="scanning-card">
+
+                <div class="scanning-loader-wrapper">
+                    <div class="loader"></div>
+                    <img src="../assests/logo.png" alt="Scanning" class="scanning-logo-img">
+                </div>
+
+                <h2>Finding apply link...</h2>
+
+                <p>
+                    Checking links on this page
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================
+             RESULT STATE
+        ================================= -->
+
+        <section id="resultState" class="state hidden">
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div class="success-row">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>Application found</strong>
+
+                    <p>
+                        Best matching link detected
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 BEST LINK
+            ================================== -->
+
+            <div class="section-label">
+                DIRECT APPLICATION
+            </div>
+
+
+            <div id="bestLinkCard" class="link-card selected">
+
+                <div class="link-icon">
+                    ↗
+                </div>
+
+
+                <div class="link-information">
+
+                    <div id="bestLinkText" class="link-title">
+                        Apply
+                    </div>
+
+
+                    <div id="bestLinkDomain" class="link-domain">
+                        company.com
+                    </div>
+
+                </div>
+
+
+                <div class="check">
+                    ✓
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 OTHER POSSIBLE LINKS
+            ================================== -->
+
+            <div id="otherSection" class="hidden">
+
+                <div class="section-label">
+                    OTHER POSSIBILITIES
+                </div>
+
+
+                <!--
+                    JavaScript will dynamically
+                    insert other links here.
+                -->
+
+                <div id="otherLinks"></div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 OPEN BUTTON
+            ================================== -->
+
+            <button id="openButton" class="primary-button open-button">
+
+                Open Application
+
+                <span>↗</span>
+
+            </button>
+
+
+
+            <!-- Scan again -->
+
+            <button id="scanAgainButton" class="secondary-button">
+
+                ↻ Scan page again
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================================
+             ERROR STATE
+        ================================= -->
+
+        <section id="errorState" class="state hidden">
+
+            <div class="error-card">
+
+                <div class="error-icon">
+                    !
+                </div>
+
+
+                <h2>No application found</h2>
+
+                <p>
+                    We couldn't find a likely application link on this page.
+                </p>
+
+
+                <button id="retryButton" class="primary-button">
+
+                    Scan again
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             FOOTER
+        ================================= -->
+
+        <footer>
+
+            <div class="footer-brand">
+                <img src="../assests/logo.png" alt="ApplyDirect" class="footer-logo-img">
+                <span>ApplyDirect</span>
+            </div>
+
+            <span>v1.0</span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
